@@ -1,0 +1,18 @@
+<div class="navbar">
+<div>
+<%= link_to "Wikinimous", articles_path, :class => "home-name" %>
+</div>
+<div class="new-article-btn">
+<%= link_to "New Article", new_article_path, :class => "home-name" %><br>
+</div>
+</div>
+
+<div class="container">
+
+<br>
+<% @articles.each do |article| %>
+<label for="task"><%= link_to article.title, article_path(article), :class => 'titles' %></label><br>
+<p><%= article.content %></p>
+<% end %>
+</div>
+</div>
